@@ -117,11 +117,11 @@ class Color:
     B_White = "\x1b[107m"
 
 # CONST
-VERSAO = '0.41'
+VERSAO = '0.43'
 CR = '0D'
-MANUFACTURER = 'dmslabs'
+MANUFACTURER = 'SMS'
 VIA_DEVICE = 'smsUPS'
-NODE_ID = 'dmslabs'
+NODE_ID = 'SMS'
 APP_NAME = 'smsUPS'
 MQTT_CMD_SHUTDOWN = '{"cmd": "SHUTDOWN","val": "$publish_time"}'
 UUID = str(uuid.uuid1())
@@ -202,10 +202,10 @@ statusLast = status.copy()
 
 json_hass = {"sensor": '''
 { 
-  "stat_t": "home/$ups_id/json",
+  "state_topic": "homeassistant/sensor/$ups_id/state",
   "name": "$name",
-  "uniq_id": "$uniq_id",
-  "val_tpl": "{{ value_json.$val_tpl }}",
+  "unique_id": "$unique_id",
+  "value_template": "{{ value_json.$value_template }}",
   "icon": "$icon",
   "device_class": "$device_class",
   "expire_after": "$expire_after",
@@ -213,10 +213,10 @@ json_hass = {"sensor": '''
 }''',
     "binary_sensor": '''
 { 
-  "stat_t": "home/$ups_id/json",
+  "state_topic": "homeassistant/binary_sensor/$ups_id/state",
   "name": "$name",
-  "uniq_id": "$uniq_id",
-  "val_tpl": "{{ value_json.$val_tpl }}",
+  "unique_id": "$unique_id",
+  "value_template": "{{ value_json.$value_template }}",
   "device_class": "$device_class",
   "device": { $device_dict },
   "expire_after": "$expire_after",
@@ -228,7 +228,7 @@ json_hass = {"sensor": '''
 ''',
     "switch": '''
 { 
-  "stat_t": "home/$ups_id/json",
+  "state_topic": "homeassistant/switch/$ups_id/state",
   "name": "$name",
   "cmd_t":"home/$ups_id/cmd",
   "icon":"$icon",
