@@ -10,7 +10,7 @@ ENV LANG C.UTF-8
 # erro em amd64-base-python:3.9-alpine3.12
 
 
-RUN pip3 install paho-mqtt
+RUN pip3 install paho-mqtt==1.6.1
 RUN pip3 install pyserial
 RUN pip3 install requests
 RUN pip3 install flask
