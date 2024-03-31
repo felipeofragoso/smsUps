@@ -1,27 +1,27 @@
 {
     "#BeepLigado":{
-       "name":"BeepLigado",
+       "name":"Beep Ligado",
        "pl_on": "on",
        "pl_off": "off",
        "pl_avail": "",
        "pl_not_avail": ""
     },
     "ShutdownAtivo":{
-       "name":"ShutdownAtivo",
+       "name":"Shutdown Ativo",
        "pl_on": "on",
        "pl_off": "off",
        "pl_avail": "on",
        "pl_not_avail": "off"
     },
     "TesteAtivo":{
-       "name":"TesteAtivo",
+       "name":"Teste Ativo",
        "pl_on": "on",
        "pl_off": "off",
        "pl_avail": "on",
        "pl_not_avail": "off"
     },
     "UpsOk":{
-       "name":"UpsOk",
+       "name":"UPS OK",
        "device_class":"safety",
        "pl_on": "off",
        "pl_off": "on",
@@ -45,7 +45,7 @@
        "pl_not_avail": "off"
     },
     "BateriaBaixa":{
-       "name":"BateriaBaixa",
+       "name":"Bateria Baixa",
        "device_class":"battery",
        "pl_on": "on",
        "pl_off": "off",
@@ -53,7 +53,7 @@
        "pl_not_avail": "off"
     },
     "BateriaEmUso":{
-       "name":"BateriaEmUso",
+       "name":"Bateria em Uso",
        "device_class":"battery_charging",
        "pl_on": "on",
        "pl_off": "off",
